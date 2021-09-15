@@ -1,0 +1,31 @@
+ 
+import 'package:flutter/material.dart';
+
+
+class BottomText extends StatelessWidget {
+  final String mainText;
+  final String secondaryText;
+
+  const BottomText({Key key, this.mainText, this.secondaryText}) : super(key: key);
+  @override
+  Widget build(BuildContext context) {
+    return  RichText(text: TextSpan(
+        children: [
+          TextSpan(text: "$mainText \n"),
+          TextSpan(text: secondaryText,
+              style: (TextStyle(fontFamily:'Code-Next-ExtraBold',fontSize: 16,
+                                  fontWeight: FontWeight.w300,
+                                  color: Colors.white)
+                                  
+                                ),
+                
+              ),
+        ],
+        style: (TextStyle(fontFamily:'Code-Next-ExtraBold',fontSize: 16,
+                                  fontWeight: FontWeight.w300,
+                                  color: Colors.white)
+                                  
+                                ),
+    ));
+  }
+}
